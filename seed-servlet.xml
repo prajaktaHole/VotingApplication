@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 
+    SimpleUrlHandlerMapper
+     -->
+     
+     <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+     	<property name="mappings">
+     		<props>
+     			<prop key="/adminlogin">l1</prop>
+     			<prop key="/adminlogout">l2</prop>
+     			<prop key="/addcandidate">l3</prop>
+     			<prop key="/deletecandidate">l4</prop>
+     			<prop key="/uregister">l5</prop>
+     			<prop key="/ulogin">l6</prop>
+     			<prop key="/ulogout">l7</prop>
+     			<prop key="/addvote">l8</prop>
+     		</props>
+     	</property>
+     </bean>
+     
+     <bean id="l1" class="com.Controller.Launch1"></bean>
+     <bean id="l2" class="com.Controller.Launch2"></bean>
+     <bean id="l3" class="com.Controller.Launch3"></bean>
+     <bean id="l4" class="com.Controller.Launch4"></bean>
+     <bean id="l5" class="com.Controller.Launch5"></bean>
+     <bean id="l6" class="com.Controller.Launch6"></bean>
+     <bean id="l7" class="com.Controller.Launch7"></bean>
+     <bean id="l8" class="com.Controller.Launch8"></bean>
+    
+    
+
+     
+     
+     <!-- 
+     view Resolver
+     InternalResourceViewResolver
+     
+      -->
+      
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    	<property name="prefix" value="/"></property>
+    	<property name="suffix" value=".jsp"></property>
+    </bean>
+      
+     
+     
+     
+     
+     
+     
+     
+     
+
+</beans>
